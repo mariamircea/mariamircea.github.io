@@ -21,16 +21,6 @@ export function AboutLanding() {
             title={profile.title}
             description={profile.introduction}
           />
-          <ul className="mt-8 flex flex-wrap gap-3">
-            {profile.roles.map((role) => (
-              <li
-                key={role}
-                className="rounded-sm border border-stone-200 px-3 py-2 text-sm text-stone-700"
-              >
-                {role}
-              </li>
-            ))}
-          </ul>
           <div className="mt-10 flex flex-wrap gap-3">
             {externalLinks.map((link) => {
               const isExternal = link.href.startsWith("http");
