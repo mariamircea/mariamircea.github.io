@@ -9,7 +9,7 @@ export default function PublicationsPage() {
       <PageHeader
         eyebrow="Publications"
         title="Publications"
-        description="A clean, maintainable publication list. Placeholder entries can later be replaced or populated from Google Scholar."
+        description="Selected peer-reviewed publications and preprints."
       />
 
       <div className="mt-14">
