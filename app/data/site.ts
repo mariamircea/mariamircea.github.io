@@ -36,10 +36,9 @@ export const profile = {
   name: "Maria Mircea, PhD",
   title: "Knowledge-Guided AI for Precision Medicine",
   roles: [
-    "Scientist",
     "Computational Biology",
-    "Graph Machine Learning",
     "Cancer Immunotherapy",
+    "Omics Analysis"
   ],
   introduction:
     "Combining machine learning, biological knowledge, and biomedical data to build interpretable computational approaches for biomedical discovery.",
