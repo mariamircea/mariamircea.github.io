@@ -1,7 +1,7 @@
 import { Container } from "../components/Container";
 import { PageHeader } from "../components/PageHeader";
-import { PublicationList } from "../components/PublicationList";
-import { publications } from "../data/site";
+import { PublicationTabs } from "../components/PublicationTabs";
+import { conferences, publications } from "../data/site";
 
 export default function PublicationsPage() {
   return (
@@ -9,11 +9,14 @@ export default function PublicationsPage() {
       <PageHeader
         eyebrow="Publications"
         title="Publications"
-        description="Selected peer-reviewed publications and preprints."
+        description="Publications and preprints."
       />
 
       <div className="mt-14">
-        <PublicationList publications={publications} />
+        <PublicationTabs
+          publications={publications}
+          conferences={conferences}
+        />
       </div>
     </Container>
   );

@@ -5,9 +5,9 @@ const circles = [
     labelClassName: "items-center justify-start pt-14",
   },
   {
-    label: ["Biological", "Knowledge"],
+    label: ["Mechanistic", "Understanding"],
     className: "bottom-4 left-5",
-    labelClassName: "items-start justify-start pt-25 pl-8",
+    labelClassName: "items-start justify-start pt-25 pl-4",
   },
   {
     label: ["Biomedical", "Data"],
@@ -20,7 +20,7 @@ export function ConceptDiagram() {
   return (
     <figure
       className="relative mx-auto aspect-square w-full max-w-[25rem]"
-      aria-label="Machine learning, biological knowledge, and biomedical data intersecting toward precision medicine."
+      aria-label="Machine learning, mechanistic understanding, and biomedical data intersecting toward precision medicine."
     >
       <div className="absolute -left-1 -right-1 top-2 -bottom-1 rounded-full border border-stone-200" />
       {circles.map((circle) => (
@@ -46,8 +46,8 @@ export function ConceptDiagram() {
         </span>
       </div>
       <figcaption className="sr-only">
-        Precision Medicine sits at the overlap of Machine Learning, Biological
-        Knowledge, and Biomedical Data.
+        Precision Medicine sits at the overlap of Machine Learning,
+        Mechanistic Understanding, and Biomedical Data.
       </figcaption>
     </figure>
   );

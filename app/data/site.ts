@@ -11,7 +11,7 @@ export type LinkItem = {
 export type PublicationTheme =
   | "Machine Learning"
   | "Biomedical Data"
-  | "Biological Knowledge";
+  | "Mechanistic Understanding";
 
 export type Publication = {
   title: string;
@@ -22,6 +22,16 @@ export type Publication = {
   linkLabel: string;
   href: string;
   themes: PublicationTheme[];
+};
+
+export type Conference = {
+  date: string;
+  name: string;
+  location: string;
+  type: "Poster" | "Invited Speaker" | "Selected Talk";
+  title: string;
+  links?: LinkItem[];
+  note?: string;
 };
 
 export type CvEntry = {
@@ -41,7 +51,7 @@ export const profile = {
     "Omics Analysis"
   ],
   introduction:
-    "Combining machine learning, biological knowledge, and biomedical data to build interpretable computational approaches for biomedical discovery.",
+    "Combining machine learning, mechanistic understanding, and biomedical data to build interpretable computational approaches for biomedical discovery.",
   email: "hello@mariamircea.com",
   cvHref: "/cv",
   googleScholarHref: "https://scholar.google.com/citations?user=P8f0BhgAAAAJ&hl=en",
@@ -65,7 +75,105 @@ export const externalLinks: LinkItem[] = [
 export const publicationThemes: PublicationTheme[] = [
   "Machine Learning",
   "Biomedical Data",
-  "Biological Knowledge",
+  "Mechanistic Understanding",
+];
+
+export const conferences: Conference[] = [
+  {
+    date: "2026",
+    name: "CIMT - Cancer Immunotherapy Meeting",
+    location: "Mainz, Germany",
+    type: "Poster",
+    title:
+      "Interpretable multiple instance learning neural network for T-cell immunogenicity prediction from ELISpot data",
+  },
+  {
+    date: "2024",
+    name: "Hands on Machine Learning Workshop",
+    location: "Bonn, Germany",
+    type: "Invited Speaker",
+    title: "Inference of Gene Regulation in Stem Cell Development with PINNs",
+  },
+  {
+    date: "2023",
+    name: "Machine Learning in Healthcare",
+    location: "Cambridge, United Kingdom",
+    type: "Poster",
+    title: "Regularization in Universal Differential Equations",
+  },
+  {
+    date: "2023",
+    name: "BATenergy, Organ Crosstalk, Signaling and Energetics",
+    location: "Hamburg, Germany",
+    type: "Poster",
+    title:
+      "Predicting the Browning of Adipose Tissue from Transcriptomics and Proteomics measurements",
+  },
+  {
+    date: "2021",
+    name: "BioSB",
+    location: "Utrecht, Netherlands",
+    type: "Selected Talk",
+    title:
+      "A Clusterability Measure for Single Cell Transcriptomics reveals Phenotypic Subpopulations",
+    links: [
+      {
+        label: "phiclust",
+        href: "https://github.com/semraulab/phiclust",
+      },
+    ],
+  },
+  {
+    date: "2020",
+    name: "Single Cell Research, VIB",
+    location: "Leuven, Belgium",
+    type: "Poster",
+    title:
+      "A Clusterability Measure for Single Cell RNA-sequencing Data with Random Matrix Theory",
+    // links: [
+    //   // {
+    //   //   label: "YouTube",
+    //   //   href: "https://youtu.be/oXTqk3TMuSU",
+    //   // },
+    // ],
+  },
+  {
+    date: "2020",
+    name: "Single Cell Biology",
+    location: "Cambridge, United Kingdom",
+    type: "Poster",
+    title:
+      "Evaluating Clustering of Single Cell RNA-sequencing Data with Random Matrix Theory",
+  },
+  {
+    date: "2019",
+    name: "NWOLife",
+    location: "Netherlands",
+    type: "Poster",
+    title:
+      "A Stochastic Agent-Based Model to Capture Cellular Patterning during in-vitro Gastrulation",
+  },
+  {
+    date: "2018",
+    name: "Summer School in Bioinformatics",
+    location: "Cambridge, United Kingdom",
+    type: "Poster",
+    title: "Single Cell RNA-sequencing denoising using a deep count autoencoder",
+  },
+  {
+    date: "2017",
+    name: "ARS'17 International Workshop",
+    location: "Naples, Italy",
+    type: "Poster",
+    title: "Galois Lattice and Positional Dominance",
+    links: [
+      {
+        label: "galoislattice",
+        href: "https://github.com/Siliegia/galoislattice",
+      },
+    ],
+    note: "Best Poster Award",
+  },
 ];
 
 export const experience: CvEntry[] = [
@@ -120,7 +228,7 @@ export const publications: Publication[] = [
     details: "107:102349",
     linkLabel: "doi.org/10.1016/j.molmet.2026.102349",
     href: "https://doi.org/10.1016/j.molmet.2026.102349",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2025",
@@ -132,7 +240,7 @@ export const publications: Publication[] = [
     details: "28(10)",
     linkLabel: "doi.org/10.1016/j.isci.2025.113611",
     href: "https://doi.org/10.1016/j.isci.2025.113611",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2024",
@@ -143,7 +251,7 @@ export const publications: Publication[] = [
     venue: "PLOS Computational Biology",
     linkLabel: "doi.org/10.1371/journal.pcbi.1011825",
     href: "https://doi.org/10.1371/journal.pcbi.1011825",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2024",
@@ -153,7 +261,7 @@ export const publications: Publication[] = [
     venue: "bioRxiv",
     linkLabel: "arXiv:2401.07379",
     href: "https://arxiv.org/abs/2401.07379v1",
-    themes: ["Machine Learning", "Biomedical Data", "Biological Knowledge"],
+    themes: ["Machine Learning", "Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2022",
@@ -163,7 +271,7 @@ export const publications: Publication[] = [
     venue: "Stem Cells",
     linkLabel: "doi.org/10.1093/stmcls/sxac086",
     href: "https://doi.org/10.1093/stmcls/sxac086",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2022",
@@ -173,7 +281,7 @@ export const publications: Publication[] = [
     venue: "Journal of Tissue Engineering",
     linkLabel: "doi.org/10.1177/20417314221103042",
     href: "https://doi.org/10.1177/20417314221103042",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2021",
@@ -193,7 +301,7 @@ export const publications: Publication[] = [
     venue: "Biochemical Society Transactions",
     linkLabel: "doi.org/10.1042/BST20210135",
     href: "https://doi.org/10.1042/BST20210135",
-    themes: ["Biological Knowledge"],
+    themes: ["Mechanistic Understanding"],
   },
   {
     year: "2020",
@@ -205,7 +313,7 @@ export const publications: Publication[] = [
     details: "26:862-879",
     linkLabel: "doi.org/10.1016/j.stem.2020.05.004",
     href: "https://doi.org/10.1016/j.stem.2020.05.004",
-    themes: ["Biomedical Data", "Biological Knowledge"],
+    themes: ["Biomedical Data", "Mechanistic Understanding"],
   },
   {
     year: "2019",
